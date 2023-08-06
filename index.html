@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./css/reset.css">
 <link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/modal.css">
 <link rel="stylesheet" href="./css/sidebar.css">
 <link rel="stylesheet" href="./css/welcome.css">
 <link rel="stylesheet" href="./css/todolist.css">
@@ -37,30 +38,16 @@
                 <div class="todolist-page-container">
                     <header> 
                         <div class="todolist-header-items">
-                            <input type="text" class="text-input w-f" placeholder="Please enter todo...">
+                            <input type="text" class="text-input w-f" 
+                            placeholder="Please enter todo..." onkeyup="addTodoOnKeyUpHandle(event);">
                         </div>
                         <div class="todolist-header-items">
-                            <button class="btn w-f">추가</button>
+                            <button class="btn w-f" onclick="addTodoButtonOnClick();">추가</button>
                         </div>
                     </header>
                     
                     <ul class="todolist-main-container">
-                        <li class="todolist-items">
-                            <div class="checkbox">
-                                <input type="checkbox" id="complet-chkbox1" class="complet-chkboxs">
-                                <label for="complet-chkbox1"></label>
-                            </div>
-                            <div class="item-center">
-                                <pre class="todolist-content">오늘 할 일을 출력합니다.</pre>
-                            </div>
-                            <div class="item-right">
-                                <p class="todolist-date">2023-08-03</p>
-                                <div class="todolist-item-buttons">
-                                    <button class="btn btn-edit">수정</button>
-                                    <button class="btn btn-remove">삭제</button>
-                                </div>
-                            </div>                                
-                        </li>
+                        <!--todolist.js에 있음-->
                     </ul>
 
 
@@ -68,11 +55,21 @@
               
 
             </main>
+            <!--모달창...? 그게먼데-->
+            <div class="modal invisible">
+                <!--modal.js 에 있음 -->
+            </div>
         </div>
     </div>
-    <script src="./js/welcome.js"> </script>
-    <script src="./js/routes.js"></script>
-    <script src="./js/sidebar.js"></script>
+
+
+    
     <script src="./js/index.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/routes.js"></script>
+    <script src="./js/modal.js"> </script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/welcome.js"> </script>
+    <script src="./js/todolist.js"> </script>
 </body>
 </html>
